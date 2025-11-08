@@ -318,7 +318,7 @@ span { color: #b74b4b; }
   border: 2px solid #b74b4b;
   border-radius: 2rem;
   width: 320px;
-  height: 400px; /* balanced height */
+  height: 400px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -335,7 +335,7 @@ span { color: #b74b4b; }
 .project-card img,
 .project-card video {
   width: 100%;
-  height: 200px; /* uniform media height */
+  height: 200px; 
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -343,13 +343,13 @@ span { color: #b74b4b; }
 }
 
 .project-card h3 {
-  margin: 10px 0 3px; /* compact spacing */
+  margin: 10px 0 3px;
   font-size: 18px;
   color: #b74b4b;
 }
 
 .project-card p {
-  margin: 0; /* compact spacing */
+  margin: 0; 
   font-size: 14px;
   color: #ccc;
   line-height: 1.3;
@@ -390,3 +390,38 @@ span { color: #b74b4b; }
 }
 
 .contact-form button { margin-top: 1rem; }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; 
+  top: 0;
+  width: 100vw; 
+  height: 100vh;
+  background-color: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keeps aspect ratio while filling the screen */
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.close:hover { color: #bbb; }
+
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
